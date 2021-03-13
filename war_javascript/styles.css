@@ -1,0 +1,82 @@
+*, *::after, *::before{ 
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 4rem);
+    grid-template-rows: 7rem 2rem 7rem;
+    gap: .5rem;
+    cursor: pointer;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.deck{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+    user-select: none;
+}
+.computer-deck{
+    background-color: #f4ca16;
+}
+.player-deck{
+    background-color: #fb4f14;
+}
+
+.text{
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: monaco
+}
+
+.card{
+position: relative;
+height: 100%;
+width: 100%;
+border: 1px solid black;
+border-radius: .25rem;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1rem;
+}
+.card.red{
+    color: red;
+}
+.card.blue{
+    color: #4b6f91;
+}
+.card.orange{
+    color: orangered;
+}
+.card.green{
+    color:green;
+}
+
+
+.card::before,
+.card::after{
+    position: absolute;
+    content: attr(data-value);
+    font-size: 1rem;
+}
+
+.card::before{
+    top: .5rem;
+    left: .5rem
+}
+.card::after{
+    bottom: .5rem;
+    right: .5rem;
+    transform: translate(180deg);
+}
