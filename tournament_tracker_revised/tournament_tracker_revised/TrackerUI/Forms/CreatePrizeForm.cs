@@ -54,7 +54,7 @@ namespace TrackerUI.Forms
 
         private bool ValidateForm()
         {
-            bool output = false;
+            bool output = true;
             int placeNumber = 0;
             bool placeNumberValidNumber = int.TryParse(placeNumberTextBox.Text, out placeNumber);
 
