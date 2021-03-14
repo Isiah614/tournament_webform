@@ -41,14 +41,23 @@ namespace TrackerUI.Forms
             if(ValidateForm())
             {
                 PrizeModel model = new PrizeModel(
-                    placeNumberTextBox.Text, 
+                    placeNameTextBox.Text, 
                     placeNumberTextBox.Text, 
                     prizeAmountTextBox.Text, 
-                    prizeAmountTextBox.Text);
+                    prizePercentageTextBox.Text);
                 foreach(IDataConnection db in GlobalConfig.Connections)
                 {
                     db.CreatePrize(model);
                 }
+                placeNameTextBox.Text = "";
+                placeNumberTextBox.Text = "";
+                prizeAmountTextBox.Text = "0";
+                prizePercentageTextBox.Text = "0";
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid information has been input. Please try again.");
             }
         }
 
