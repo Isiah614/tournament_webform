@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using TrackerLibrary;
+using TrackerLibrary.DataAccess;
 using TrackerLibrary.Models;
 
 namespace TrackerUI.Forms
@@ -43,7 +45,10 @@ namespace TrackerUI.Forms
                     placeNumberTextBox.Text, 
                     prizeAmountTextBox.Text, 
                     prizeAmountTextBox.Text);
-
+                foreach(IDataConnection db in GlobalConfig.Connections)
+                {
+                    db.CreatePrize(model);
+                }
             }
         }
 
