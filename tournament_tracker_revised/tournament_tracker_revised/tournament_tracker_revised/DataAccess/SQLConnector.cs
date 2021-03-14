@@ -20,7 +20,7 @@ namespace TrackerLibrary.DataAccess
         /// <returns>The prize information, including the unique identifier</returns>
         public PrizeModel CreatePrize(PrizeModel model)
         {
-            using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString("SmashTournamentTemplate")))
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString("generictournamenttemplate")))
             {
                 var p = new DynamicParameters();
                 p.Add("@PlaceNumber", model.PlaceNumber);

@@ -37,13 +37,13 @@ namespace TrackerUI.Forms
             this.unplayedOnlyCheckBox = new System.Windows.Forms.CheckBox();
             this.matchupListBox = new System.Windows.Forms.TextBox();
             this.team1ScoreLabel = new System.Windows.Forms.Label();
-            this.team1ScoreBox = new System.Windows.Forms.ListBox();
             this.sampleTeam1Label = new System.Windows.Forms.Label();
             this.sampleTeam2Label = new System.Windows.Forms.Label();
             this.sampleTeamScore2Label = new System.Windows.Forms.Label();
-            this.team2ScoreBox = new System.Windows.Forms.ListBox();
             this.vsLabel = new System.Windows.Forms.Label();
             this.scoreButton = new System.Windows.Forms.Button();
+            this.team1ScoreBox = new System.Windows.Forms.TextBox();
+            this.team2ScoreBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // TournamentLabel
@@ -113,16 +113,6 @@ namespace TrackerUI.Forms
             this.team1ScoreLabel.TabIndex = 21;
             this.team1ScoreLabel.Text = "Score";
             // 
-            // team1ScoreBox
-            // 
-            this.team1ScoreBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.team1ScoreBox.FormattingEnabled = true;
-            this.team1ScoreBox.ItemHeight = 28;
-            this.team1ScoreBox.Location = new System.Drawing.Point(535, 244);
-            this.team1ScoreBox.Name = "team1ScoreBox";
-            this.team1ScoreBox.Size = new System.Drawing.Size(133, 32);
-            this.team1ScoreBox.TabIndex = 20;
-            // 
             // sampleTeam1Label
             // 
             this.sampleTeam1Label.AutoSize = true;
@@ -153,16 +143,6 @@ namespace TrackerUI.Forms
             this.sampleTeamScore2Label.TabIndex = 26;
             this.sampleTeamScore2Label.Text = "Score";
             // 
-            // team2ScoreBox
-            // 
-            this.team2ScoreBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.team2ScoreBox.FormattingEnabled = true;
-            this.team2ScoreBox.ItemHeight = 28;
-            this.team2ScoreBox.Location = new System.Drawing.Point(535, 402);
-            this.team2ScoreBox.Name = "team2ScoreBox";
-            this.team2ScoreBox.Size = new System.Drawing.Size(133, 32);
-            this.team2ScoreBox.TabIndex = 25;
-            // 
             // vsLabel
             // 
             this.vsLabel.AutoSize = true;
@@ -183,20 +163,36 @@ namespace TrackerUI.Forms
             this.scoreButton.Text = "Score";
             this.scoreButton.UseVisualStyleBackColor = true;
             // 
+            // team1ScoreBox
+            // 
+            this.team1ScoreBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.team1ScoreBox.Location = new System.Drawing.Point(535, 238);
+            this.team1ScoreBox.Name = "team1ScoreBox";
+            this.team1ScoreBox.Size = new System.Drawing.Size(125, 34);
+            this.team1ScoreBox.TabIndex = 30;
+            // 
+            // team2ScoreBox
+            // 
+            this.team2ScoreBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.team2ScoreBox.Location = new System.Drawing.Point(535, 402);
+            this.team2ScoreBox.Name = "team2ScoreBox";
+            this.team2ScoreBox.Size = new System.Drawing.Size(125, 34);
+            this.team2ScoreBox.TabIndex = 31;
+            // 
             // TournamentViewerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 511);
+            this.Controls.Add(this.team2ScoreBox);
+            this.Controls.Add(this.team1ScoreBox);
             this.Controls.Add(this.scoreButton);
             this.Controls.Add(this.vsLabel);
             this.Controls.Add(this.sampleTeam2Label);
             this.Controls.Add(this.sampleTeamScore2Label);
-            this.Controls.Add(this.team2ScoreBox);
             this.Controls.Add(this.sampleTeam1Label);
             this.Controls.Add(this.team1ScoreLabel);
-            this.Controls.Add(this.team1ScoreBox);
             this.Controls.Add(this.matchupListBox);
             this.Controls.Add(this.unplayedOnlyCheckBox);
             this.Controls.Add(this.roundBox);
@@ -220,12 +216,12 @@ namespace TrackerUI.Forms
         private System.Windows.Forms.CheckBox unplayedOnlyCheckBox;
         private System.Windows.Forms.TextBox matchupListBox;
         private System.Windows.Forms.Label team1ScoreLabel;
-        private System.Windows.Forms.ListBox team1ScoreBox;
         private System.Windows.Forms.Label sampleTeam1Label;
         private System.Windows.Forms.Label sampleTeam2Label;
         private System.Windows.Forms.Label sampleTeamScore2Label;
-        private System.Windows.Forms.ListBox team2ScoreBox;
         private System.Windows.Forms.Label vsLabel;
         private System.Windows.Forms.Button scoreButton;
+        private System.Windows.Forms.TextBox team1ScoreBox;
+        private System.Windows.Forms.TextBox team2ScoreBox;
     }
 }
