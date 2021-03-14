@@ -5,7 +5,10 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerLibrary", "tournament_tracker_revised\TrackerLibrary.csproj", "{2CC928A7-64AF-4FC3-A864-ADCFD8193A40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerUI", "TrackerUI\TrackerUI.csproj", "{70C8B731-96C2-4462-9B51-EFECC822322D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackerUI", "TrackerUI\TrackerUI.csproj", "{70C8B731-96C2-4462-9B51-EFECC822322D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2CC928A7-64AF-4FC3-A864-ADCFD8193A40} = {2CC928A7-64AF-4FC3-A864-ADCFD8193A40}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
