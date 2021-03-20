@@ -3,11 +3,12 @@ GO
 
 IF DB_ID('generictournamenttemplate') IS NOT NULL DROP DATABASE 'generictournamenttemplate';
 
-CREATE DATABASE 'generictournamenttemplate'
+CREATE DATABASE generictournamenttemplate;
 GO
 
-USE 'generictournamenttemplate'
+USE generictournamenttemplate;
 GO
+
 BEGIN TRANSACTION
 
 CREATE TABLE Tournaments(
